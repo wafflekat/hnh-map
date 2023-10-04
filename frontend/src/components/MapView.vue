@@ -57,7 +57,7 @@
             </template>
         </vue-context>
         <modal name="coordSet">
-            <form v-on:submit.prevent="setCoords(form)"> 
+            <form v-on:submit.prevent="setCoords()"> 
                 <input v-model="coordSet.x" class="input" type="text" placeholder="0">
                 <input v-model="coordSet.y" class="input" type="text" placeholder="0">
                 <button class="button is-primary">Submit</button>
@@ -68,7 +68,7 @@
 
 <script>
     import {ModelSelect} from 'vue-search-select'
-    import {GridCoordLayer, MouseoverLayer, HnHCRS, HnHMaxZoom, HnHMinZoom, TileSize} from "../utils/LeafletCustomTypes";
+    import {GridCoordLayer, HnHCRS, HnHMaxZoom, HnHMinZoom, TileSize} from "../utils/LeafletCustomTypes";
     import {SmartTileLayer} from "../utils/SmartTileLayer";
     import * as L from "leaflet";
     import {API_ENDPOINT} from "../main";
@@ -413,7 +413,7 @@
                 this.coordSetFrom = data.coords;
                 this.$modal.show('coordSet');
             },
-            setCoords(form) {
+            setCoords() {
                 this.$http.get(`${API_ENDPOINT}/admin/setCoords`, {params: {
                     map: this.mapid,
                     fx: this.coordSetFrom.x, 

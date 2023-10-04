@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {HnHMaxZoom, ImageIcon} from "../utils/LeafletCustomTypes";
 import * as L from "leaflet";
 

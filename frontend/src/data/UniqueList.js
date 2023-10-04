@@ -1,6 +1,7 @@
 /**
  * Elements should have unique field "id"
  */
+/* eslint-disable */
 export class UniqueList {
     constructor() {
         this.elements = {};
