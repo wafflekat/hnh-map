@@ -1,3 +1,4 @@
+/* eslint-disable */
 import L, {Bounds, LatLng, Point} from "leaflet"
 import {getTileUrl} from "../main";
 

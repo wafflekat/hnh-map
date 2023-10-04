@@ -1,3 +1,4 @@
+/* eslint-disable */
 import L, {Bounds, LatLng, Point, Util, Browser} from "leaflet"
 
 export const SmartTileLayer = L.TileLayer.extend({

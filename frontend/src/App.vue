@@ -7,8 +7,6 @@
 <script>
     import 'bootstrap/dist/css/bootstrap.min.css'
 
-    import Vue from 'vue'
-
     export default {
         name: "App",
         methods: {
