@@ -104,6 +104,7 @@ func (m *Map) updatePositions(rw http.ResponseWriter, req *http.Request) {
 			X, Y int
 		}
 		Type string
+		Image string
 	}{}
 	buf, err := ioutil.ReadAll(req.Body)
 	if err != nil {
@@ -140,6 +141,7 @@ func (m *Map) updatePositions(rw http.ResponseWriter, req *http.Request) {
 					Y: craw.Coords.Y + (gd.Coord.Y * 100),
 				},
 				Type:    craw.Type,
+				Image:	 craw.Image,
 				updated: time.Now(),
 			}
 			old, ok := m.characters[id]
